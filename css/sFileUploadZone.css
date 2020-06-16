@@ -1,0 +1,40 @@
+
+/* layout.css Style */
+.upload-drop-zone {
+    height: auto;
+    border-width: 2px;
+    margin: 10px;
+    padding: 15px;
+    color: #8c8686;
+    font-size:17px;
+    border-style: dashed;
+    border-color: #ccc;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.upload-drop-zone.drop {
+    color: #222;
+    border-color: #222;
+}
+
+.image-preview-input !important {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.image-preview-input input[type=file] !important {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px !important;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0) !important;
+}

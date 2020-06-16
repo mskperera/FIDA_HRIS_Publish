@@ -1,0 +1,121 @@
+.sMessageBox {
+    z-index: 500;
+   
+    /*width: 100%;*/
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    border: 5px solid #ffffff;
+    /*left: 15%;*/
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    text-align: center;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+
+.sMessageBox-warning{
+     background-color: #fa6800;
+}
+  
+  
+.sMessageBox-success{
+      background-color: #60a723;
+}
+    .sMessageBox .btn-ok {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: white;
+        border:1px white solid;
+        border-radius:50%;
+          position:absolute;
+          right:25px;
+         bottom:25px;
+         font-weight:bold;
+    }
+
+    
+    .sMessageBox .btn-ok:hover {
+        background-color: #565656;
+        color: white;
+        border:1px white solid;
+    }
+
+.Show{
+   transform:translate(0);
+}
+
+.Hide {
+    transform:translateY(-100vh);
+}
+
+.sMessageBox .bodyMessage {
+      color: white;
+          font-size:18px;
+          font-family:arial;
+   
+}
+.sMessageBox .bodyMessage p {
+  margin-bottom:50px;
+     color: white;
+     font-size:15px;
+    font-family:arial;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  max-width:500px;
+
+  padding: 10px;
+ top: 30%;
+   position: relative;
+}
+
+
+
+.sMessageBox .sMessageBoxBody {
+    padding-top: 15px;
+    /*background-color:#b6ff00;*/
+}
+.sMessageBox .bodyButtons {
+    margin: 0px;
+}
+
+
+
+.messageIcon{
+    font-size:46px;
+    position:absolute;
+    left:25px;
+   bottom:20px;
+    color:white;
+
+}
+
+
+
+
+/*<!-- #region Message Box -->
+<%-- <div class="BackDrop" id="backdropMessageBox" >
+<div class="center" >
+<div id="messagebox" class="sMessageBox" >
+<div class="sMessageBoxBody" >
+<div class="bodyMessage" >
+<p id="bodyparagraph" > body messag</p >
+</div >
+<i class="fa fa-check-circle messageIcon" >
+
+</i >
+<div class="bodyButtons" >
+
+<button class="btn-ok"
+onclick="HideMessageBox()" >
+OK</button >
+</div >
+
+</div >
+
+</div >
+</div >
+</div > --% >
+<!-- #endregion -->*/

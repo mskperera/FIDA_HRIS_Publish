@@ -1,0 +1,100 @@
+.DialogBox {
+    z-index: 500;
+    background: rgb(244,244,255);
+    background: linear-gradient(90deg, rgba(244,244,255,1) 0%, rgba(227,227,255,1) 57%, rgba(227,235,255,1) 100%);
+    /*width: 100%;*/
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    /*left: 15%;*/
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-radius: 5px;
+    border: 4px solid #4390df;
+}
+
+
+     .metro .DialogBox .btn-yes:hover {
+        background-color: #2b6db1;
+    }
+
+   .metro .DialogBox .btn-no {
+        padding: 7px;
+        width: 70px;
+          height:40px;
+        background-color: darkgray;
+        color: white;
+    }
+       .metro .DialogBox .btn-no:hover {
+        background-color: #737070;
+    }
+
+.Show {
+    transform: translate(0);
+}
+
+.Hide {
+    transform: translateY(-100vh);
+}
+
+
+
+.DialogBox .bodyMessage {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    max-width: 500px;
+    padding: 10px;
+    top: 30%;
+    position: relative;
+}
+
+.DialogBox .sDialogBody {
+    padding-top: 2px;
+    /*background-color:#b6ff00;*/
+}
+
+.DialogBox .bodyButtons {
+    margin: 0px;
+}
+
+
+
+.DialogBox .TitleBar  {
+    width: 100%;
+    color: white;
+    text-align: center;
+    vertical-align: central;
+    padding: 5px;
+    border-radius: 4px 4px 0 0;
+        background-color: #4390df;
+}
+
+
+ .metro .DialogBox .btn-yes {
+        padding: 7px;
+        width: 70px;
+        height:40px;
+        background-color: #4390df;
+        color: white;
+    }
+
+
+.LoadingBox {
+    z-index: 500;
+    /*width: 100%;*/
+    box-shadow: 1px 1px 1px black;
+    /*left: 15%;*/
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    width:100%;
+    background-color:white;
+}

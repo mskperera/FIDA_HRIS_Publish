@@ -1,0 +1,143 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HRMaster.Master" AutoEventWireup="true" CodeBehind="EvalConductEvaluation.aspx.cs" Inherits="Smarter_HRIS.EvalConductEvaluation1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(function () {
+            $('#<%= txtInterviewer.ClientID %>').autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: "SearchEmployee.asmx/GetEmployeeNames",
+                        data: "{ 'EmpName': '" + request.term + "' }",
+                        type: "POST",
+                        dataType: "json",
+                        contentType: "application/json;charset=utf-8",
+                        success: function (data) {
+                            response(data.d);
+                        },
+                        error: function (result) {
+                            alert('There is a problem processing your request');
+                        }
+                    });
+                },
+                minLength: 0
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('#<%= txtEmployee.ClientID %>').autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: "SearchEmployee.asmx/GetEmployeeNames",
+                        data: "{ 'EmpName': '" + request.term + "' }",
+                        type: "POST",
+                        dataType: "json",
+                        contentType: "application/json;charset=utf-8",
+                        success: function (data) {
+                            response(data.d);
+                        },
+                        error: function (result) {
+                            alert('There is a problem processing your request');
+                        }
+                    });
+                },
+                minLength: 0
+            });
+        });
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+        <legend>Conduct Evaluation</legend>
+        <asp:HiddenField ID="lblUserID" runat="server" />
+        <asp:Panel ID="pnlMessages" runat="server"></asp:Panel>
+
+        <asp:Panel ID="pnlStart" runat="server">
+            <div class="text-center">
+                <asp:Label ID="Label1" runat="server" Text="Select Evaluator"></asp:Label>
+                <asp:TextBox ID="txtInterviewer" runat="server"></asp:TextBox>
+                <asp:Button ID="bttnSelect" runat="server" Text="Select" CssClass="info" OnClick="bttnSelect_click" />
+            </div>
+        </asp:Panel>
+        <asp:Panel ID="pnlContent" runat="server">
+            <h2>
+                <asp:Label ID="lblInterviewer" runat="server" Text="Label"></asp:Label></h2>
+            <table>
+                <tr>
+                    <td>
+                        <label>Company</label>
+                    </td>
+                    <td>&nbsp;:&nbsp<asp:DropDownList ID="drpCompany" runat="server" Width="200"></asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Session</label>
+                    </td>
+                    <td>&nbsp;:&nbsp<asp:DropDownList ID="drpSession" runat="server" Width="200"></asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Employee</label>
+                    </td>
+                    <td>&nbsp;:&nbsp<asp:TextBox ID="txtEmployee" runat="server"></asp:TextBox>
+                    </td>
+                    <td>
+                        <button class="info small" id="bttnSelectEmp" runat="server" onserverclick="bttnSelectEmp_click">select</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Questionnaire</label>
+                    </td>
+                    <td>&nbsp;:&nbsp<asp:TextBox ID="txtQuestionnaire" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+            </table>
+            <asp:GridView ID="grdScoreCard" runat="server" AutoGenerateColumns="False" Width="850px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="7" CellSpacing="3" GridLines="Vertical" ShowFooter="True">
+                <AlternatingRowStyle BackColor="#DCDCDC" />
+                <Columns>
+                    <asp:BoundField DataField="QuestionNo" HeaderText="Question No" />
+                    <asp:BoundField DataField="Category" HeaderText="Category" />
+                    <asp:BoundField DataField="Question" HeaderText="Question" />
+                    <asp:TemplateField HeaderText="Score">
+                        <ItemTemplate>
+                            <asp:TextBox ID="txtScore" Text='<%# Eval("Score") %>' Width="80" runat="server"></asp:TextBox>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:BoundField DataField="MinMarks" HeaderText="Min Marks" />
+                    <asp:BoundField DataField="MaxMarks" HeaderText="Max Marks" />
+                    <asp:BoundField DataField="Weightage" HeaderText="Weightage %" />
+                       <asp:BoundField DataField="TotalWeightage" HeaderText="Total Weightage" />
+                </Columns>
+                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#000065" />
+            </asp:GridView>
+            <asp:Button ID="bttnTotal" runat="server" Text="Calculate" CssClass="info small" OnClick="bttnTotal_Click" />
+            <br />
+            <br />
+            <button class="shortcut success" id="bttnSubmit" runat="server" onserverclick="bttnSubmit_click">
+                <i class="icon-floppy"></i>
+                Submit
+            </button>
+        </asp:Panel>
+
+    </div>
+
+    <asp:HiddenField ID="HiddenID" runat="server" />
+    <asp:HiddenField ID="HiddenEmpID" runat="server" />
+    <asp:HiddenField ID="HiddenQuestionnaireID" runat="server" />
+    <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+    <script>
+        webshims.setOptions('forms-ext', { types: 'date' });
+        webshims.polyfill('forms forms-ext');
+    </script>
+</asp:Content>

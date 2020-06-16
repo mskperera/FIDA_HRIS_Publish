@@ -1,0 +1,504 @@
+
+
+
+/*lable, h1, h2, h3, h4, h5, h6, div {
+    color: rgba(0,0,0,.87) !important;
+}*/
+
+
+.header2 {
+    font-size: 22px;
+    font-weight: 600;
+    padding-left: 20px;
+    color:#555555;
+}
+
+.sContent {
+    margin: 20px 10px 20px 10px;
+}
+
+.sControllerFieldH {
+    display: flex;
+    margin: 5px 15px;
+}
+
+
+
+    .sControllerFieldH .lbl {
+        margin-right: 7px;
+        padding-top: calc(0.25rem + 1px);
+        font-size: 15px;
+        width: auto;
+    }
+
+
+.sSearchPanelH {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sFormControl .full-width {
+        width: auto;
+}
+.sFormControl {
+    display: block;
+    width: 100%;
+    min-width: 220px;
+    height: 29px;
+    font-size: 14px;
+    padding: 2px 10px;
+    line-height: 1.42857143;
+    color: #6b6767;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #a8aaab;
+    /*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);*/
+    /*border-radius: 4px;*/
+    border-radius: 4px;
+    font-family: 'Microsoft Sans Serif';
+}
+.sFormControl:disabled {
+    display: block;
+    height: 29px;
+    font-size: 14px;
+    padding: 2px 10px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #e2e2e2;
+    background-image: none;
+    border: 1px solid #607d8b;
+    /*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);*/
+    /*border-radius: 4px;*/
+    border-radius: 4px;
+    font-family: 'Microsoft Sans Serif';
+}
+
+option {
+    border: 1px #4b4b4c solid;
+    padding: 10px;
+}
+
+    option:checked {
+        border: 1px #4b4b4c solid;
+        padding: 10px;
+        background-color: #4390df;
+        color: white
+    }
+
+/*hide corner arrow of dropdown list
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 50px;
+}*/
+
+.sButton .Search {
+    width: 50px;
+    background-color: green;
+}
+
+
+.sSearchPanelH .SearchButton {
+    text-align: right;
+}
+
+
+.sButtonGroupH {
+    padding-top: 10px;
+    padding-left:30px;
+}
+
+    .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+@media(max-width:1200px) {
+
+    .sControllerFieldH .lbl {
+        width: 80px;
+    }
+
+    .sControllerFieldH {
+        margin: 5px 30px;
+    }
+
+    .sSearchPanelH .SearchButton {
+        position: relative;
+        left: 150px;
+        height: 100px;
+        width: 100px;
+    }
+
+   .metro.sButton .Search {
+        width: 100px;
+        height: 120px;
+    }
+
+
+}
+
+
+
+@media (max-device-width: 480px) and (orientation: landscape) {
+    .sControllerFieldH {
+        background-color: green;
+    }
+}
+
+
+
+
+.sFormControl:hover {
+    /*border: 2px solid #3b95f1b3;*/
+    box-shadow: 0 0 0 2px rgba(96, 125, 139, 0.45);
+}
+
+.sFormControl:focus {
+    /*border: 2px solid #3b95f1b3;*/
+    -webkit-box-shadow: 0 0 0 3px rgba(43, 168, 228, 0.58);
+    box-shadow: 0 0 0 3px rgba(43, 168, 228, 0.73);
+}
+
+
+
+
+.sBtn {
+    display: inline-block;
+    padding: 4px 6px 3px 6px;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 4px;
+    font-family: arial;
+    -webkit-box-shadow: 0 0 0 3px rgba(43, 168, 228, 0.58);
+    box-shadow: 0 0 0 3px rgba(43, 168, 228, 0.73);
+}
+
+.sBtn:hover {
+        color: #fff;
+        background-color: #636363;
+        -webkit-box-shadow: 0 0 0 3px rgba(255, 235, 0, 0.78);
+        box-shadow: 0 0 0 3px rgba(255, 224, 0, 0.92);
+    }
+
+
+
+.sSearchButton {
+    float: left !important;
+    width: 20% !important;
+    padding: 10px !important;
+    background: #2196F3 !important;
+    color: white !important;
+    font-size: 17px !important;
+    border: 1px solid grey !important;
+    border-left: none !important;
+    cursor: pointer !important;
+}
+
+
+.gridview {
+    padding: 2px;
+    margin: 12%;
+    background-color: red;
+    height: 40px;
+}
+
+    .gridview span {
+        margin: 0px 10px 0px 10px;
+        background-color: #4390df;
+        color: #fff;
+        font-weight: bold;
+        -o-box-shadow: 1px 1px 1px #111;
+        -moz-box-shadow: 1px 1px 1px #111;
+        -webkit-box-shadow: 1px 1px 1px #111;
+        box-shadow: 2px 2px 2px #3e3d3d;
+        border-radius: 50%;
+        padding: 6px 11px 6px 11px;
+    }
+
+    .gridview a:hover {
+        background-color: #c5c5c5;
+        color: #131313;
+    }
+
+    .gridview a {
+        margin: 4px;
+        border-radius: 50%;
+        background-color: #423b3b;
+        padding: 5px 10px 5px 10px;
+        color: #cec8c8;
+        text-decoration: none;
+        -o-box-shadow: 1px 1px 1px #111;
+        -moz-box-shadow: 1px 1px 1px #111;
+        -webkit-box-shadow: 1px 1px 1px #111;
+        box-shadow: 1px 1px 1px #111;
+    }
+
+.EditedRow {
+    text-decoration: underline;
+    color: #fa6800;
+}
+
+.SelectedRow {
+    text-decoration: underline;
+    color: #fa6800;
+    border: 1px #fa6800 solid;
+    height: 50px;
+    box-shadow: 0px 1px 3px #faa200;
+}
+
+.sAllowanceSearchBox {
+    margin-top: 0px;
+    width: 100%;
+    position: relative;
+}
+
+    .sAllowanceSearchBox .Header {
+        padding: 5px 10px 5px 10px;
+        background-color: #555555;
+        color: white;
+    }
+
+    .sAllowanceSearchBox .Body {
+        padding: 10px 10px;
+    }
+
+
+div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+}
+
+
+.GridViewRightTopPanelContainter {
+    position: relative;
+}
+
+.GridViewRightTopPanel {
+    height: 36px;
+    width: 300px;
+    background-color: #ffcbcb;
+    position: absolute;
+    bottom: 130px;
+    right: 12px;
+}
+
+
+
+
+.containerCheckBox {
+    display: block;
+    /*  padding-left: 27px;*/
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+}
+
+    /* Hide the browser's default checkbox */
+    .containerCheckBox input {
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    border: 1px #b3aeae solid;
+    /*   box-shadow: 1px 1px 2px #7b7777;*/
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheckBox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckBox input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckBox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckBox .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.RadioButtonMargine{
+    margin:10px;
+}
+
+
+
+.sPanel {
+    background-color: #f7fbff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.DayBox {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border: 2px #535a5f solid;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.DayBox-title {
+    background-color: #5a5e61;
+    color: white;
+    text-align: center;
+    border-radius: 9px 9px 0px 0px;
+}
+
+.DayBox-body {
+    min-height: 50px;
+}
+
+.LeaveAmountPanel {
+    background-color: #535a5f;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px
+}
+
+.LeaveAmountLabelContent {
+    border: 1px #dae1e6 solid;
+    padding: 3px;
+    border-radius: 4px;
+    background-color
+}
+
+.LeaveAmountLabel {
+    font-weight: bolder;
+    color: white;
+    font-size: 13px;
+}
+
+.AddEmployeeSummeryPanel {
+   border:1px solid #d9d9d9;padding:0 10px;
+letter-spacing:1px;
+font-family:arial;
+font-size:17px;
+padding-bottom:10px;
+background-color:#ffffff;
+
+
+}
+.AddEmployeeSummeryTitle {
+   display:flex;
+   padding-left:20px;
+}
+
+.change-button-container{
+    margin-top:5px;
+     text-align:center;
+      padding-left:25px!important;
+      padding-top:5px;
+
+}
+
+.change-button{
+    width:80%;  
+   height:30px;
+   color:white!important;
+  
+}
+
+.EmpSummeryDetail{
+    border-top:1px #d9d9d9 solid; 
+    padding :5px 10px;
+  
+}
+
+.empNameLeft{
+    width:60%;
+}
+
+.empNameRight{
+    width:40%;
+    margin-top:5px;
+    text-align:right;
+}
+
+.emp-img {
+    border-radius: 60px;
+}
+
+
+.SearchPanel {
+    width: 80%;
+    margin-top: 20px;
+
+}
+.search-panel-container{
+    text-align:right;
+}
+
+.GridviewContent {
+}
+
+.SetHorizontally {
+    display: flex;
+   
+}
+
+.searchbox{
+      width: 100%;
+    
+}
+
+.mandertorytb-highlight{
+    background-color:#a0cfff;
+
+}
+
+.employeeTB {
+    width: 298px;
+}
+
+.full-width{
+    width:100%;
+}

@@ -1,0 +1,136 @@
+﻿
+.metro .input-control.checkbox,
+.metro .input-control.radio,
+.metro .input-control.switch,
+.metro .input-control.text,
+.metro .input-control.password,
+.metro .input-control.select,
+.metro .input-control.textarea {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 7pt;
+}
+
+    .metro .input-control.checkbox input[type="checkbox"],
+    .metro .input-control.radio input[type="checkbox"],
+    .metro .input-control.checkbox input[type="radio"],
+    .metro .input-control.radio input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+    }
+
+        .metro .input-control.checkbox input[type="checkbox"]:focus ~ .check,
+        .metro .input-control.radio input[type="checkbox"]:focus ~ .check,
+        .metro .input-control.checkbox input[type="radio"]:focus ~ .check,
+        .metro .input-control.radio input[type="radio"]:focus ~ .check {
+            outline: 1px #999999 dotted !important;
+        }
+
+    .metro .input-control.checkbox .caption,
+    .metro .input-control.radio .caption {
+        margin: 0 5px;
+    }
+
+    .metro .input-control.checkbox .check,
+    .metro .input-control.radio .check {
+        width: 20px;
+        height: 20px;
+        background-color: #ffffff;
+        border: 2px #03A9F4 solid;
+        padding: 0;
+        margin: 0 5px 0 0;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .metro .input-control.checkbox.text-left .check,
+    .metro .input-control.radio.text-left .check {
+        margin: 0 0 0 5px;
+    }
+
+    .metro .input-control.checkbox:hover .check,
+    .metro .input-control.radio:hover .check {
+        border-color: #919191;
+    }
+
+    .metro .input-control.checkbox .check:active,
+    .metro .input-control.radio .check:active {
+        border-color: #1e1e1e;
+    }
+
+    .metro .input-control.checkbox .check:focus,
+    .metro .input-control.radio .check:focus {
+        border-color: #919191;
+    }
+
+    .metro .input-control.checkbox .check:after,
+    .metro .input-control.radio .check:after {
+        position: absolute;
+        font-family: metroSysIcons;
+        font-size: 9pt;
+        line-height: 9pt;
+    }
+
+    .metro .input-control.checkbox input[type="checkbox"]:checked ~ .check:after,
+    .metro .input-control.radio input[type="checkbox"]:checked ~ .check:after,
+    .metro .input-control.checkbox input[type="radio"]:checked ~ .check:after,
+    .metro .input-control.radio input[type="radio"]:checked ~ .check:after {
+        content: "\e003";
+        margin: 2px;
+        top: 0;
+        color: #1d1d1d;
+    }
+
+    .metro .input-control.checkbox input[type="checkbox"]:disabled ~ .check,
+    .metro .input-control.radio input[type="checkbox"]:disabled ~ .check,
+    .metro .input-control.checkbox input[type="radio"]:disabled ~ .check,
+    .metro .input-control.radio input[type="radio"]:disabled ~ .check {
+        border-color: #d9d9d9;
+        background-color: #e6e6e6;
+    }
+
+        .metro .input-control.checkbox input[type="checkbox"]:disabled ~ .check:after,
+        .metro .input-control.radio input[type="checkbox"]:disabled ~ .check:after,
+        .metro .input-control.checkbox input[type="radio"]:disabled ~ .check:after,
+        .metro .input-control.radio input[type="radio"]:disabled ~ .check:after {
+            color: #8a8a8a;
+        }
+
+    .metro .input-control.checkbox input[data-show="intermediate"] ~ .check:after,
+    .metro .input-control.radio input[data-show="intermediate"] ~ .check:after,
+    .metro .input-control.checkbox input[data-show="intermediate"]:checked ~ .check:after,
+    .metro .input-control.radio input[data-show="intermediate"]:checked ~ .check:after {
+        display: block;
+        content: "" !important;
+        width: 10px;
+        height: 10px;
+        background-color: #1d1d1d;
+        margin: 3px;
+    }
+
+    .metro .input-control.checkbox input[data-show="intermediate"]:disabled ~ .check:after,
+    .metro .input-control.radio input[data-show="intermediate"]:disabled ~ .check:after {
+        background-color: #8a8a8a;
+    }
+
+    .metro .input-control.radio .check {
+        border-radius: 50%;
+    }
+
+    .metro .input-control.radio.default-style input[type="radio"]:checked ~ .check:after {
+        display: block;
+        content: "" !important;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #1d1d1d;
+        margin: 3px;
+    }
+
+    .metro .input-control.radio.default-style input[type="radio"]:checked:disabled ~ .check:after {
+        background-color: #8a8a8a;
+    }

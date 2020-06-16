@@ -1,0 +1,60 @@
+
+.ModuleActivation {
+ margin: auto;
+  width: 500px;
+  border: 1px solid #d4d8ff;
+  background-color:aliceblue;
+  margin-top:100px;
+    border-radius: 5px;
+}
+
+.FormHeader{
+    background-color:rgb(31, 95, 132);
+    color:white;
+      padding: 15px;
+      font-family:arial;
+      font-size:20px;
+      border-bottom:2px orange solid;
+
+}
+
+.FormBody{
+    text-align:center;
+        padding: 30px 1px 20px 1px;
+
+}
+.form-control{
+  padding:10px;
+  width:80%;
+  border:2px solid #00c124;
+}
+.FormFooter {
+
+padding:0px 10px 10px 10px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid orange;
+    border-radius: 4px;
+    color:white;
+}
+
+.bg-light-blue {
+    background-color: #3c8dbc !important;
+}

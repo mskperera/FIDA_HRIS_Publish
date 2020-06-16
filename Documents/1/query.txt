@@ -1,0 +1,12 @@
+
+create view VWHeadcount as
+select em.FirstName, em.MiddleName, em.LastName, em.EmployeeNo, em.GenderStatus, dr.DivisionName 
+from EmployeeMaster em, EmployeeDetails ed, DivisionRegistration dr
+where em.EmployeeNo = ed.EmployeeNo and ed.DivisionID = dr.DivisionID
+
+
+
+create view VWabnormalLate as 
+select em.FirstName, em.MiddleName, em.LastName , em.EmployeeNo, at.CheckInTime, at.Date, at.Remark, s.ShiftName, s.ShiftStartTime
+from Attendance at, EmployeeMaster em, Shift s
+where at.EmployeeID = em.EmployeeMasterID and at.ShiftID= s.ShiftID

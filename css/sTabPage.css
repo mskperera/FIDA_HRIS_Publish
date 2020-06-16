@@ -1,0 +1,116 @@
+﻿
+
+.nav-tabs {
+    border-bottom: 2px solid #DDD;
+
+}
+
+    /*.nav-tabs:hover {
+        border-width: 0;
+    }*/
+
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+        border-width: 1px;
+        background-color:transparent;
+    }
+
+    .nav-tabs > li > a {
+        border: none;
+        color: #666;
+        margin-right: 2px;
+        line-height: 1.42857143;
+
+    }
+
+        .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+            border: none;
+            color: #2ba8e4 !important;
+            border-radius: 10px 10px 1px 1px;
+            font-weight: 500;
+        }
+
+        .nav-tabs > li > a::after {
+            content: "";
+            background: #2ba8e4;
+            height: 4px;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            bottom: -1px;
+            transition: all 250ms ease 0s;
+            transform: scale(0);
+        }
+
+    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+        transform: scale(1);
+    }
+
+.tab-nav > li > a::after {
+    background: #21527d none repeat scroll 0% 0%;
+    color: #fff;
+}
+
+.tab-pane {
+    padding: 5px 5px;
+}
+
+.tab-content {
+    padding: 5px;
+}
+
+.card {
+    background: #FFF none repeat scroll 0% 0%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.LoginBtn {
+    padding: 20px !important;
+    width: 20%;
+    /*background-color:#0f28b9 !important;*/
+    background-image: linear-gradient(to right top, #1c4889, #204997);
+    margin: 10px !important;
+    color: white !important;
+    border: 1px white solid !important;
+    border-radius: 4px !important;
+    font-size: 20px !important;
+}
+
+    .LoginBtn:hover {
+        background-image: linear-gradient(to right top, #3c65a0, #436ab3);
+    }
+
+.LoginTextBox {
+    padding: 10px 10px 10px 10px !important;
+    width: 50% !important;
+    font-size: 18px !important;
+}
+
+.loginControlContainer{
+
+}
+
+
+.LeaveSumitBtn {
+    background-color: #28a206 !important;
+    float: right;
+    padding: 20px 20px 20px 20px !important;
+    width: 30%;
+    color: white !important;
+    font-weight: 700;
+    font-size: 18px !important;
+   
+}
+.LeaveValidationBtn {
+    padding: 20px 20px 20px 20px !important;
+    font-size: 18px !important;
+    padding-bottom: 35px !important;
+}
+
+.dateSelector {
+    height: 30px !important;
+}
+.SearchBtn{
+    height:40px !important;
+    width:70px !important;
+}

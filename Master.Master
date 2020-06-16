@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Smarter_HRIS.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Smart HRIS</title>
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="js/prettify/prettify.css" rel="stylesheet">
+
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/prettify/prettify.js"></script>
+    <script src="js/holder/holder.js"></script>
+    <script src="js/metro/metro-datepicker.js"></script>
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="js/load-metro.js"></script>
+
+    <!-- Local JavaScript -->
+    <script src="js/docs.js"></script>
+    <script src="js/github.info.js"></script>
+<%--    <script src="js/ga.js"></script>--%>
+
+    <link href="Styles/jquery-ui.css" rel="stylesheet" />
+    <link href="Styles/jquery-ui.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jQuery-1.8.3.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+    <script src="Scripts/jquery-ui.min.js"></script>
+       
+
+        <link href="css/sComponentStyles.css" rel="stylesheet" />
+    <style>
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="metro" id="main2" style="background-color: white;" runat="server">
+    <form id="form1" runat="server" style="background-color: white;">
+        <div runat="server" id="main" style="background-color: white;">
+
+            <%-- --------------%>
+            <header>
+                <div class="navbar">
+                    <div class="navbar-content container">
+                        <a href="Home.aspx" class="element"><span class="icon-grid-view"></span> Smart HRIS <sup>tm</sup></a>
+                        <span class="element-divider"></span>
+
+                        <div class="no-tablet-portrait" onclick="history.go(-1);">
+                            <a class="element brand" href="#"><span class="icon-undo" onclick="history.go(-1);"></span></a>
+                        </div>
+                        <span class="element-divider"></span>
+
+                        <a class="pull-menu" href="#"></a>
+                        <ul class="element-menu">
+                            <li>
+                                <a class="" href="Home.aspx">Home</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-toggle" href="#">Support</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="#">Help</a></li>
+                                    <li>
+                                        <a href="#" class="dropdown-toggle">About</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="no-tablet-portrait">
+                            <span class="element-divider"></span>
+                            <a class="element brand" href="#"><span class="icon-spin"></span></a>
+                            <a class="element brand" href="#"><span class="icon-printer"></span></a>
+                            <span class="element-divider"></span>
+                            <%--  --%>
+                         <%--   <div class="element input-element">
+                                <form>
+                                    <div class="input-control text">
+                                        <input type="text" placeholder="Search..." />
+                                        <button class="btn-search"></button>
+                                    </div>
+                                </form>
+                            </div>--%>
+                            <div class="element place-right">
+                                <a class="dropdown-toggle" href="#"><span class="icon-cog"></span></a>
+                                <ul class="dropdown-menu place-right" data-role="dropdown">
+                                    <li><a href="EmpChangePassword.aspx">Change Password</a></li>
+                                    <li><a href="Login.aspx">Log Out</a></li>
+                                </ul>
+                            </div>
+                            <span class="element-divider place-right"></span>
+                            <button class="element image-button image-left place-right">
+                                <asp:Label ID="lblsession1" CssClass="trans" Text="" runat="server">  </asp:Label>
+                                <img src="images/live2.jpg" id="headerimg" runat="server" />
+                            </button>
+                            <div class="times" data-role="times" style="padding-top: 10px; font-size: 15px" data-style-background="bg-darkViolet" data-style-divider="fg-darkViolet"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color:#e21616;" id="errorStripe" runat="server">
+                    <div class="navbar-content container">
+                          <label id="message"  runat="server" style="color:white;text-align:right;">  </label>
+                    </div>
+                </div>
+            </header>
+            <%-- -----------------%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="main" runat="server" style="background-color: white;">
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+
+                        <script src="Language_Translation/LangTranslations.js"></script>
+
+
+        <script type="text/javascript">
+
+     
+                TranslateElements_all();
+            
+      
+
+
+    //On UpdatePanel Refresh
+    var prm = Sys.WebForms.PageRequestManager.getInstance();
+     if (prm != null) {
+        prm.add_endRequest(function (sender, e) {
+            if (sender._postBackSettings.panelsToUpdate != null) {
+           
+                TranslateElements_all();
+            }
+        });
+    };
+
+</script>
+    </form>
+
+
+</body>
+</html>

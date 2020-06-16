@@ -1,0 +1,36 @@
+
+.sLabel {
+    display: inline-block;
+    padding: 5px 8px;
+    margin: 0;
+    font-size: 90%;
+    font-weight: normal !important;
+    line-height: 90%;
+    background: #eeeeee;
+    color: #555555;
+    font-weight: bold;
+}
+
+.sLabel span{
+    color:white;
+}
+
+    .sLabel.error {
+        background-color: #e51400;
+        color: #ffffff;
+    }
+
+.sLabel.warning {
+    background-color: #fa6800;
+    color: #ffffff;
+}
+
+    .sLabel.success {
+        background-color: #128023;
+        color: #ffffff;
+    }
+
+    .sLabel.info {
+        background-color: #1ba1e2;
+        color: #ffffff;
+    }
